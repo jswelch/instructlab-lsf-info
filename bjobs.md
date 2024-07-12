@@ -1,12 +1,6 @@
 # bjobs(1)
 
-"", June 2023
-
-.ll 72
-
-.ce 1000
 **bjobs**
-.ce 0
 
 
 Displays and filters information about LSF jobs. Specify one or
@@ -14,8 +8,6 @@ more job IDs (and, optionally, an array index list) to display
 information about specific jobs (and job arrays).
 
 
-
-<a name="synopsis"></a>
 
 # Synopsis
 
@@ -29,7 +21,6 @@ information about specific jobs (and job arrays).
 
 **bjobs** **-V**
 
-<a name="categories-and-options"></a>
 
 # Categories and Options
 
@@ -63,23 +54,17 @@ Displays summarized information about job arrays.
 
 
 
-<a name="categories"></a>
-
 # Categories
 
 
 
 filter
 
-<a name="synopsis"></a>
-
 # Synopsis
 
 
 
 **bjobs -A**
-
-<a name="description"></a>
 
 # Description
 
@@ -94,21 +79,13 @@ necessary.
 Parent topic: Options
 
 
-
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
-
-.ce 1000
 **-a**
-.ce 0
+
 
 
 Displays information about jobs in all states, including jobs
 that finished recently.
 
-
-
-<a name="categories"></a>
 
 # Categories
 
@@ -116,15 +93,12 @@ that finished recently.
 
 state
 
-<a name="synopsis"></a>
 
 # Synopsis
 
 
 
 **bjobs -a**
-
-<a name="description"></a>
 
 # Description
 
@@ -137,8 +111,6 @@ period is 1 hour).
 Use -a with -x option to display all jobs that have triggered a
 job exception (overrun, underrun, idle).
 
-<a name="examples"></a>
-
 # Examples
 
 
@@ -150,46 +122,29 @@ Displays all jobs of all users.
 Parent topic: Options
 
 
-
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
-
-.ce 1000
 **-aff**
-.ce 0
 
 
 Displays information about jobs with CPU and memory affinity
 resource requirements for each task in the job.
 
 
-
-<a name="categories"></a>
-
 # Categories
 
 
 
 filter, format
-
-<a name="synopsis"></a>
-
 # Synopsis
 
 
 
 **bjobs -l** | **-UF** [**-aff**]
 
-<a name="conflicting-options"></a>
-
 # Conflicting Options
 
 
 
 Use only with the -l or -UF option.
-
-<a name="description"></a>
-
 # Description
 
 
@@ -210,20 +165,10 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
-
-.ce 1000
-**-app**
-.ce 0
-
 
 Displays information about jobs submitted to the specified
 application profile.
 
-
-
-<a name="categories"></a>
 
 # Categories
 
@@ -231,24 +176,17 @@ application profile.
 
 filter
 
-<a name="synopsis"></a>
-
 # Synopsis
 
 
 
 **bjobs -app** application_profile_name
 
-<a name="description"></a>
-
 # Description
 
 
 
 You must specify an existing application profile.
-
-<a name="examples"></a>
-
 # Examples
 
 
@@ -261,38 +199,23 @@ fluent.
 Parent topic: Options
 
 
-
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
-
-.ce 1000
 **-aps**
-.ce 0
 
 
 Displays absolute priority scheduling (APS) information for
 pending jobs in a queue with APS_PRIORITY enabled.
 
 
-
-<a name="categories"></a>
-
 # Categories
 
 
 
 format
-
-<a name="synopsis"></a>
-
 # Synopsis
 
 
 
 **bjobs -aps**
-
-<a name="description"></a>
-
 # Description
 
 
@@ -322,29 +245,19 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
-
-.ce 1000
 **-cname**
-.ce 0
+
 
 
 In IBM Spectrum LSF Advanced Edition, includes the cluster name
 for execution cluster hosts in the output.
 
 
-
-<a name="categories"></a>
-
 # Categories
 
 
 
 format
-
-<a name="synopsis"></a>
-
 # Synopsis
 
 
@@ -353,8 +266,6 @@ format
 
 **Note: **This command option is deprecated and might be
 removed in a future version of LSF.
-
-<a name="examples"></a>
 
 # Examples
 
@@ -383,20 +294,12 @@ SCHEDULING PARAMETERS:
 Parent topic: Options
 
 
-
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
-
-.ce 1000
 **-d**
-.ce 0
+
 
 
 Displays information about jobs that finished recently.
 
-
-
-<a name="categories"></a>
 
 # Categories
 
@@ -404,15 +307,11 @@ Displays information about jobs that finished recently.
 
 state
 
-<a name="synopsis"></a>
-
 # Synopsis
 
 
 
 **bjobs -d**
-
-<a name="description"></a>
 
 # Description
 
@@ -422,7 +321,6 @@ The finished jobs that -d displays are those that finished within
 an interval specified by CLEAN_PERIOD in lsb.params (the default
 period is 1 hour).
 
-<a name="examples"></a>
 
 # Examples
 
@@ -437,12 +335,9 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-data**
-.ce 0
+
 
 
 Displays the data file requirements for the job. The -data option
@@ -453,31 +348,22 @@ requested by the job.
 
 
 
-<a name="categories"></a>
-
 # Categories
 
 
 
 filter
-
-<a name="synopsis"></a>
-
 # Synopsis
 
 
 
 **bjobs -data** [jobID]
 
-<a name="conflicting-options"></a>
-
 # Conflicting Options
 
 
 
 Do not use the -data option with the following options: -A, -sum.
-
-<a name="description"></a>
 
 # Description
 
@@ -500,8 +386,6 @@ value is not available.
 
 For jobs with data requirements that are specified as tags, the
 -data option shows the tag names.
-
-<a name="examples"></a>
 
 # Examples
 
@@ -547,12 +431,8 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-env**
-.ce 0
 
 
 Displays the environment variables in the job submission
@@ -560,32 +440,22 @@ environment for the specified job.
 
 
 
-<a name="categories"></a>
-
 # Categories
 
 
 
 filter
-
-<a name="synopsis"></a>
-
 # Synopsis
 
 
 
 **bjobs -env**
 
-<a name="conflicting-options"></a>
-
 # Conflicting Options
 
 
 
 Do not use with any other bjobs command options.
-
-<a name="description"></a>
-
 # Description
 
 
@@ -603,12 +473,8 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-fwd**
-.ce 0
 
 
 In LSF multicluster capability job forwarding mode, filters
@@ -616,31 +482,22 @@ output to display information on forwarded jobs.
 
 
 
-<a name="categories"></a>
-
 # Categories
 
 
 
 filter
 
-<a name="synopsis"></a>
-
 # Synopsis
 
 
 
 **bjobs -fwd**
-
-<a name="conflicting-options"></a>
-
 # Conflicting Options
 
 
 
 Do not use with the following options: -A, -d, -sla, -ss, -x.
-
-<a name="description"></a>
 
 # Description
 
@@ -656,8 +513,6 @@ running jobs.
 To use -x to see exceptions on the execution cluster, use bjobs
 -m _execution\_cluster_ -x.
 
-<a name="examples"></a>
-
 # Examples
 
 
@@ -671,19 +526,12 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-G**
-.ce 0
 
 
 Displays jobs associated with the specified user group.
 
-
-
-<a name="categories"></a>
 
 # Categories
 
@@ -691,23 +539,17 @@ Displays jobs associated with the specified user group.
 
 filter
 
-<a name="synopsis"></a>
-
 # Synopsis
 
 
 
 **bjobs -G** user_group
 
-<a name="conflicting-options"></a>
-
 # Conflicting Options
 
 
 
 Do not use with the -u option.
-
-<a name="description"></a>
 
 # Description
 
@@ -726,12 +568,8 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-g**
-.ce 0
 
 
 Displays information about jobs attached to the specified job
@@ -739,23 +577,17 @@ group.
 
 
 
-<a name="categories"></a>
-
 # Categories
 
 
 
 filter
 
-<a name="synopsis"></a>
-
 # Synopsis
 
 
 
 **bjobs -g** job_group_name
-
-<a name="description"></a>
 
 # Description
 
@@ -768,8 +600,6 @@ the SLA.
 
 bjobs -l with -g displays the full path to the group to which a
 job is attached.
-
-<a name="examples"></a>
 
 # Examples
 
@@ -798,12 +628,9 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-gpu**
-.ce 0
+
 
 
 bjobs -l -gpu shows the following information on GPU job
@@ -811,32 +638,22 @@ allocation:
 
 
 
-<a name="categories"></a>
-
 # Categories
 
 
 
 filter
-
-<a name="synopsis"></a>
-
 # Synopsis
 
 
 
 **bjobs -l** | **-UF** [**-gpu**]
 
-<a name="conflicting-options"></a>
-
 # Conflicting Options
 
 
 
 Use only with the -l or -UF option.
-
-<a name="description"></a>
-
 # Description
 
 
@@ -885,12 +702,9 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **Categories**
-.ce 0
+
 
 
    Category: filter  
@@ -911,12 +725,9 @@ Parent topic: bjobs
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **Options**
-.ce 0
+
 
 
 List of options for the bjobs command.
@@ -1133,16 +944,11 @@ Parent topic: bjobs
 Displays times in the customized output in _hh:mm:ss_ format.
 
 
-
-<a name="categories"></a>
-
 # Categories
 
 
 
 format
-
-<a name="synopsis"></a>
 
 # Synopsis
 
@@ -1150,15 +956,12 @@ format
 
 **bjobs -o** format [**-json**] **-hms**
 
-<a name="conflicting-options"></a>
 
 # Conflicting Options
 
 
 
 Use only with the -o and -o -json options.
-
-<a name="description"></a>
 
 # Description
 
@@ -1198,12 +1001,9 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-hostfile**
-.ce 0
+
 
 
 Displays information about a job submitted with a user-specified
@@ -1211,15 +1011,11 @@ host file.
 
 
 
-<a name="categories"></a>
-
 # Categories
 
 
 
 format
-
-<a name="synopsis"></a>
 
 # Synopsis
 
@@ -1227,15 +1023,11 @@ format
 
 **bjobs -l** | **-UF** [**-hostfile**]
 
-<a name="conflicting-options"></a>
-
 # Conflicting Options
 
 
 
 Use only with the -l or -UF option.
-
-<a name="description"></a>
 
 # Description
 
@@ -1248,8 +1040,6 @@ of the host file.
 
 Use -hostfile together with -l or -UF, to view the user specified
 host file content as well as the host allocation for a given job.
-
-<a name="example"></a>
 
 # Example
 
@@ -1281,12 +1071,8 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-J**
-.ce 0
 
 
 Displays information about jobs or job arrays with the specified
@@ -1294,23 +1080,18 @@ job name.
 
 
 
-<a name="categories"></a>
-
 # Categories
 
 
 
 filter
 
-<a name="synopsis"></a>
 
 # Synopsis
 
 
 
 **bjobs -J** job_name
-
-<a name="description"></a>
 
 # Description
 
@@ -1333,12 +1114,8 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-Jd**
-.ce 0
 
 
 Displays information about jobs with the specified job
@@ -1346,23 +1123,18 @@ description.
 
 
 
-<a name="categories"></a>
-
 # Categories
 
 
 
 filter
 
-<a name="synopsis"></a>
 
 # Synopsis
 
 
 
 **bjobs -Jd** job_description
-
-<a name="description"></a>
 
 # Description
 
@@ -1381,19 +1153,14 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-json**
-.ce 0
+
 
 
 Displays the customized output in JSON format.
 
 
-
-<a name="categories"></a>
 
 # Categories
 
@@ -1401,23 +1168,17 @@ Displays the customized output in JSON format.
 
 format
 
-<a name="synopsis"></a>
-
 # Synopsis
 
 
 
 **bjobs -o** format **-json**
 
-<a name="conflicting-options"></a>
-
 # Conflicting Options
 
 
 
 Do not use with the -noheader option.
-
-<a name="description"></a>
 
 # Description
 
@@ -1438,12 +1199,7 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
-
-.ce 1000
 **-l**
-.ce 0
 
 
 Long format. Displays detailed information for each job in a
@@ -1451,23 +1207,16 @@ multi-line format.
 
 
 
-<a name="categories"></a>
-
 # Categories
 
 
 
 format
-
-<a name="synopsis"></a>
-
 # Synopsis
 
 
 
 **bjobs -l**
-
-<a name="description"></a>
 
 # Description
 
@@ -1675,12 +1424,9 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-Lp**
-.ce 0
+
 
 
 Displays jobs that belong to the specified LSF License Scheduler
@@ -1688,15 +1434,11 @@ project.
 
 
 
-<a name="categories"></a>
-
 # Categories
 
 
 
 filter
-
-<a name="synopsis"></a>
 
 # Synopsis
 
@@ -1708,19 +1450,12 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-m**
-.ce 0
-
 
 Displays jobs dispatched to the specified hosts.
 
 
-
-<a name="categories"></a>
 
 # Categories
 
@@ -1728,16 +1463,12 @@ Displays jobs dispatched to the specified hosts.
 
 filter
 
-<a name="synopsis"></a>
-
 # Synopsis
 
 
 
 **bjobs -m** host_name ... | **-m** host_group ... | **-m**
 cluster_name
-
-<a name="description"></a>
 
 # Description
 
@@ -1756,8 +1487,6 @@ name is specified, you see the remote job ID, even if the
 execution host belongs to the local cluster. To determine the
 available clusters, use bclusters.
 
-<a name="examples"></a>
-
 # Examples
 
 
@@ -1771,12 +1500,7 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
-
-.ce 1000
 **-N**
-.ce 0
 
 
 Displays information about done and exited jobs, also displays
@@ -1784,15 +1508,11 @@ the normalized CPU time consumed by the job.
 
 
 
-<a name="categories"></a>
-
 # Categories
 
 
 
 filter, format, state
-
-<a name="synopsis"></a>
 
 # Synopsis
 
@@ -1800,8 +1520,6 @@ filter, format, state
 
 **bjobs -N** host_name | **-N** host_model | **-N**
 cpu_factor
-
-<a name="description"></a>
 
 # Description
 
@@ -1817,19 +1535,13 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-noheader**
-.ce 0
 
 
 Removes the column headings from the output.
 
 
-
-<a name="categories"></a>
 
 # Categories
 
@@ -1837,15 +1549,12 @@ Removes the column headings from the output.
 
 format
 
-<a name="synopsis"></a>
 
 # Synopsis
 
 
 
 **bjobs -noheader**
-
-<a name="description"></a>
 
 # Description
 
@@ -1863,27 +1572,18 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
-
-.ce 1000
 **-o**
-.ce 0
 
 
 Sets the customized output format.
 
 
 
-<a name="categories"></a>
-
 # Categories
 
 
 
 format
-
-<a name="synopsis"></a>
 
 # Synopsis
 
@@ -1895,8 +1595,6 @@ format
 **bjobs -o '**[field_name | **all**][**:**[**-**]
 [output\_width]][**:**unit_prefix] ...
 [**delimiter="**character**"**]**'**
-
-<a name="description"></a>
 
 # Description
 
@@ -2352,8 +2050,6 @@ If jobid is defined with a specified output width, the
 specified output width overrides the **LSB\_JOBID\_DISP\_LENGTH**
 value.
 
-<a name="example"></a>
-
 # Example
 
 
@@ -2390,19 +2086,15 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-P**
-.ce 0
+
 
 
 Displays jobs that belong to the specified project.
 
 
 
-<a name="categories"></a>
 
 # Categories
 
@@ -2422,12 +2114,9 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-p**
-.ce 0
+
 
 
 Displays pending jobs, together with the pending reasons that
@@ -2436,23 +2125,17 @@ turn.
 
 
 
-<a name="categories"></a>
-
 # Categories
 
 
 
 state
 
-<a name="synopsis"></a>
-
 # Synopsis
 
 
 
-**bjobs -p**&lt;level0-3&gt;
-
-<a name="description"></a>
+**bjobs -p**
 
 # Description
 
@@ -2546,19 +2229,15 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-pe**
-.ce 0
+
 
 
 Displays pending jobs that are eligible for scheduling.
 
 
 
-<a name="categories"></a>
 
 # Categories
 
@@ -2566,15 +2245,11 @@ Displays pending jobs that are eligible for scheduling.
 
 state
 
-<a name="synopsis"></a>
-
 # Synopsis
 
 
 
 **bjobs -pe**
-
-<a name="description"></a>
 
 # Description
 
@@ -2595,20 +2270,13 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-pei**
-.ce 0
 
 
 Displays pending jobs divided into lists of jobs that are
 eligible for scheduling and ineligible for scheduling.
 
-
-
-<a name="categories"></a>
 
 # Categories
 
@@ -2616,7 +2284,7 @@ eligible for scheduling and ineligible for scheduling.
 
 state
 
-<a name="synopsis"></a>
+
 
 # Synopsis
 
@@ -2624,7 +2292,6 @@ state
 
 **bjobs -pei**
 
-<a name="description"></a>
 
 # Description
 
@@ -2670,19 +2337,12 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
-
-.ce 1000
 **-pi**
-.ce 0
 
 
 Displays pending jobs that are ineligible for scheduling.
 
 
-
-<a name="categories"></a>
 
 # Categories
 
@@ -2690,15 +2350,11 @@ Displays pending jobs that are ineligible for scheduling.
 
 state
 
-<a name="synopsis"></a>
-
 # Synopsis
 
 
 
 **bjobs -pi**
-
-<a name="description"></a>
 
 # Description
 
@@ -2736,12 +2392,9 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-plan**
-.ce 0
+
 
 
 Filter for the PEND jobs that have an allocation plan. See
@@ -2749,7 +2402,6 @@ Filter for the PEND jobs that have an allocation plan. See
 
 
 
-<a name="categories"></a>
 
 # Categories
 
@@ -2757,7 +2409,6 @@ Filter for the PEND jobs that have an allocation plan. See
 
 filter
 
-<a name="synopsis"></a>
 
 # Synopsis
 
@@ -2765,7 +2416,6 @@ filter
 
 **bjobs -plan**
 
-<a name="description"></a>
 
 # Description
 
@@ -2778,12 +2428,8 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
-
-.ce 1000
 **-prio**
-.ce 0
+
 
 
 Displays the detailed absolute priority scheduling (APS)
@@ -2791,15 +2437,12 @@ factor values for all pending jobs.
 
 
 
-<a name="categories"></a>
-
 # Categories
 
 
 
 filter
 
-<a name="synopsis"></a>
 
 # Synopsis
 
@@ -2807,7 +2450,6 @@ filter
 
 **bjobs -prio**
 
-<a name="description"></a>
 
 # Description
 
@@ -2832,23 +2474,18 @@ Displays a summarized version of reasons for pending jobs.
 
 
 
-<a name="categories"></a>
-
 # Categories
 
 
 
 filter, format, state
 
-<a name="synopsis"></a>
 
 # Synopsis
 
 
 
 **bjobs -psum**
-
-<a name="description"></a>
 
 # Description
 
@@ -2870,7 +2507,6 @@ different access control levels for all users. The -psum option
 will only summarize the pending jobs that can be seen by the
 users specified with **SECURE\_JOB\_INFO\_LEVEL**.
 
-<a name="conflicting-options"></a>
 
 # Conflicting Options
 
@@ -2880,7 +2516,6 @@ Use only with the filter options that can return a list of
 pending jobs, including the following: -app, -fwd, -G, -g, -J,
 -Jd, -Lp, -m, -P, -p, -p(0~3), -pe, -pei, -pi, -q, -sla, -u
 
-<a name="examples"></a>
 
 # Examples
 
@@ -2936,12 +2571,9 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-q**
-.ce 0
+
 
 
 Displays jobs in the specified queue.
@@ -2956,7 +2588,6 @@ Displays jobs in the specified queue.
 
 filter
 
-<a name="synopsis"></a>
 
 # Synopsis
 
@@ -2964,7 +2595,7 @@ filter
 
 **bjobs -q** queue_name
 
-<a name="description"></a>
+
 
 # Description
 
@@ -2975,7 +2606,6 @@ system, and information about the configurations of these queues.
 
 In LSF multicluster capability, you cannot specify remote queues.
 
-<a name="examples"></a>
 
 # Examples
 
@@ -2990,27 +2620,20 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-r**
-.ce 0
+
 
 
 Displays running jobs.
 
 
 
-<a name="categories"></a>
-
 # Categories
 
 
 
 state
-
-<a name="synopsis"></a>
 
 # Synopsis
 
@@ -3022,27 +2645,19 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
-
-.ce 1000
 **-rusage**
-.ce 0
+
 
 
 Displays jobs requesting the resources specified by the filter.
 
 
 
-<a name="categories"></a>
-
 # Categories
 
 
 
 filter
-
-<a name="synopsis"></a>
 
 # Synopsis
 
@@ -3051,16 +2666,12 @@ filter
 **bjobs -rusage "**resource\_name[**,**resource\_name**,**. .
 .]**"**
 
-<a name="conflicting-options"></a>
-
 # Conflicting Options
 
 
 
 Can be used with other state or filter options (for example, -p
 or -r). Cannot be used with the -A option.
-
-<a name="description"></a>
 
 # Description
 
@@ -3086,8 +2697,6 @@ In this case, bjobs -rusage "resource1" or bjobs -rusage
 "resource2" will return the job, but bjobs -rusage
 "resource1,resource2" will not return the job.
 
-<a name="examples"></a>
-
 # Examples
 
 
@@ -3106,12 +2715,9 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-s**
-.ce 0
+
 
 
 Displays suspended jobs, together with the suspending reason that
@@ -3119,15 +2725,11 @@ caused each job to become suspended.
 
 
 
-<a name="categories"></a>
-
 # Categories
 
 
 
 state
-
-<a name="synopsis"></a>
 
 # Synopsis
 
@@ -3135,7 +2737,6 @@ state
 
 **bjobs -s**
 
-<a name="description"></a>
 
 # Description
 
@@ -3150,7 +2751,6 @@ old as the time interval specified by **SBD\_SLEEP\_TIME** in
 lsb.params. The reasons shown may not reflect the current load
 situation.
 
-<a name="examples"></a>
 
 # Examples
 
@@ -3164,12 +2764,9 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-script**
-.ce 0
+
 
 
 Displays the job script for the specified job from the LSF info
@@ -3177,15 +2774,11 @@ directory.
 
 
 
-<a name="categories"></a>
-
 # Categories
 
 
 
 filter
-
-<a name="synopsis"></a>
 
 # Synopsis
 
@@ -3193,15 +2786,11 @@ filter
 
 **bjobs -script**
 
-<a name="conflicting-options"></a>
-
 # Conflicting Options
 
 
 
 Do not use with any other bjobs command options.
-
-<a name="description"></a>
 
 # Description
 
@@ -3215,19 +2804,13 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
-
-.ce 1000
 **-sla**
-.ce 0
+
 
 
 Displays jobs belonging to the specified service class.
 
 
-
-<a name="categories"></a>
 
 # Categories
 
@@ -3235,15 +2818,12 @@ Displays jobs belonging to the specified service class.
 
 filter
 
-<a name="synopsis"></a>
-
 # Synopsis
 
 
 
 **bjobs -sla** service_class_name
 
-<a name="description"></a>
 
 # Description
 
@@ -3275,19 +2855,13 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-ss**
-.ce 0
 
 
 Displays summary information for LSF Session Scheduler tasks.
 
 
-
-<a name="categories"></a>
 
 # Categories
 
@@ -3295,7 +2869,6 @@ Displays summary information for LSF Session Scheduler tasks.
 
 filter
 
-<a name="synopsis"></a>
 
 # Synopsis
 
@@ -3303,7 +2876,6 @@ filter
 
 **bjobs -ss**
 
-<a name="conflicting-options"></a>
 
 # Conflicting Options
 
@@ -3312,7 +2884,6 @@ filter
 Do not use with the following options: -A, -aps, -fwd, -N, -W,
 -WL, -WF, -WP.
 
-<a name="description"></a>
 
 # Description
 
@@ -3336,19 +2907,15 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-sum**
-.ce 0
+
 
 
 Displays summary information about unfinished jobs.
 
 
 
-<a name="categories"></a>
 
 # Categories
 
@@ -3356,15 +2923,11 @@ Displays summary information about unfinished jobs.
 
 state, format
 
-<a name="synopsis"></a>
-
 # Synopsis
 
 
 
 **bjobs -sum**
-
-<a name="description"></a>
 
 # Description
 
@@ -3382,7 +2945,6 @@ Use -sum with other options (like -m, -P, -q, and -u) to filter
 the results. For example, bjobs -sum -u user1 displays job slot
 counts just for user user1.
 
-<a name="examples"></a>
 
 # Examples
 
@@ -3405,12 +2967,8 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
-
-.ce 1000
 **-U**
-.ce 0
+
 
 
 Displays jobs that are associated with the specified advance
@@ -3418,7 +2976,6 @@ reservation.
 
 
 
-<a name="categories"></a>
 
 # Categories
 
@@ -3426,7 +2983,6 @@ reservation.
 
 filter
 
-<a name="synopsis"></a>
 
 # Synopsis
 
@@ -3434,7 +2990,6 @@ filter
 
 **bjobs -U** adv_reservation_id
 
-<a name="description"></a>
 
 # Description
 
@@ -3462,8 +3017,6 @@ multiple job IDs, the output displays all jobs regardless of
 whether they are associated with the advance reservation unless
 the job IDs are not valid.
 
-<a name="examples"></a>
-
 # Examples
 
 
@@ -3488,20 +3041,14 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-u**
-.ce 0
+
 
 
 Displays jobs that were submitted by the specified users or user
 groups.
 
-
-
-<a name="categories"></a>
 
 # Categories
 
@@ -3509,24 +3056,18 @@ groups.
 
 filter
 
-<a name="synopsis"></a>
 
 # Synopsis
 
 
 
-**bjobs -u** user_name ... | **-u** user_group ... | -u
-all
-
-<a name="conflicting-options"></a>
+**bjobs -u** user_name ... | **-u** user_group ... | -u all
 
 # Conflicting Options
 
 
 
 Do not use with the -G option.
-
-<a name="description"></a>
 
 # Description
 
@@ -3557,19 +3098,14 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-UF**
-.ce 0
 
 
 Displays unformatted job detail information.
 
 
 
-<a name="categories"></a>
 
 # Categories
 
@@ -3577,15 +3113,11 @@ Displays unformatted job detail information.
 
 format
 
-<a name="synopsis"></a>
-
 # Synopsis
 
 
 
 **bjobs -UF**
-
-<a name="description"></a>
 
 # Description
 
@@ -3600,8 +3132,6 @@ ending without any separator have a semicolon added to separate
 their different parts. The first line and all lines starting with
 the time stamp are displayed unformatted in a single line. There
 is no line length and format control.
-
-<a name="examples"></a>
 
 # Examples
 
@@ -3626,12 +3156,8 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-W**
-.ce 0
 
 
 Provides resource usage information for: PROJ\_NAME,
@@ -3640,15 +3166,11 @@ START\_TIME, FINISH\_TIME.
 
 
 
-<a name="categories"></a>
-
 # Categories
 
 
 
 format
-
-<a name="synopsis"></a>
 
 # Synopsis
 
@@ -3656,7 +3178,6 @@ format
 
 **bjobs -W**
 
-<a name="description"></a>
 
 # Description
 
@@ -3669,27 +3190,18 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-w**
-.ce 0
 
 
 Wide format. Displays job information without truncating fields.
 
-
-
-<a name="categories"></a>
 
 # Categories
 
 
 
 format
-
-<a name="synopsis"></a>
 
 # Synopsis
 
@@ -3701,12 +3213,8 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-WF**
-.ce 0
 
 
 Displays an estimated finish time for running or pending jobs.
@@ -3714,15 +3222,11 @@ For done or exited jobs, displays the actual finish time.
 
 
 
-<a name="categories"></a>
-
 # Categories
 
 
 
 format
-
-<a name="synopsis"></a>
 
 # Synopsis
 
@@ -3730,8 +3234,6 @@ format
 
 **bjobs -WF**
 
-<a name="output"></a>
-
 # Output
 
 
@@ -3757,36 +3259,25 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-WL**
-.ce 0
+
 
 
 Displays the estimated remaining run time of jobs.
 
-
-
-<a name="categories"></a>
 
 # Categories
 
 
 
 format
-
-<a name="synopsis"></a>
 
 # Synopsis
 
 
 
 **bjobs -WL**
-
-<a name="output"></a>
-
 # Output
 
 
@@ -3812,27 +3303,21 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-WP**
-.ce 0
+
 
 
 Displays the current estimated completion percentage of jobs.
 
 
 
-<a name="categories"></a>
 
 # Categories
 
 
 
 format
-
-<a name="synopsis"></a>
 
 # Synopsis
 
@@ -3840,8 +3325,6 @@ format
 
 **bjobs -WP**
 
-<a name="output"></a>
-
 # Output
 
 
@@ -3867,19 +3350,15 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-X**
-.ce 0
+
 
 
 Displays noncondensed output for host groups and compute units.
 
 
 
-<a name="categories"></a>
 
 # Categories
 
@@ -3887,15 +3366,12 @@ Displays noncondensed output for host groups and compute units.
 
 format
 
-<a name="synopsis"></a>
-
 # Synopsis
 
 
 
 **bjobs -X**
 
-<a name="examples"></a>
 
 # Examples
 
@@ -3910,12 +3386,9 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-x**
-.ce 0
+
 
 
 Displays unfinished jobs that have triggered a job exception
@@ -3924,7 +3397,6 @@ runtime\_est\_exceeded).
 
 
 
-<a name="categories"></a>
 
 # Categories
 
@@ -3932,15 +3404,11 @@ runtime\_est\_exceeded).
 
 state
 
-<a name="synopsis"></a>
-
 # Synopsis
 
 
 
 **bjobs -x**
-
-<a name="description"></a>
 
 # Description
 
@@ -3953,19 +3421,14 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **job\_id**
-.ce 0
+
 
 
 Specifies the jobs or job arrays that bjobs displays.
 
 
-
-<a name="synopsis"></a>
 
 # Synopsis
 
@@ -3974,7 +3437,6 @@ Specifies the jobs or job arrays that bjobs displays.
 **bjobs** [options] [job_id |
 **"**job\_id**[**index\_list**]"** ... ]
 
-<a name="description"></a>
 
 # Description
 
@@ -4023,12 +3485,8 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-h**
-.ce 0
 
 
 Displays a description of the specified category, command option,
@@ -4036,15 +3494,12 @@ or sub-option to stderr and exits.
 
 
 
-<a name="synopsis"></a>
-
 # Synopsis
 
 
 
 **bjobs -h**[**elp**] [category ...] [option ...]
 
-<a name="description"></a>
 
 # Description
 
@@ -4055,7 +3510,6 @@ You can abbreviate the -help option to -h.
 Run bjobs -h (or bjobs -help) without a command option or
 category name to display the bjobs command description.
 
-<a name="examples"></a>
 
 # Examples
 
@@ -4074,19 +3528,13 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-V**
-.ce 0
 
 
 Prints LSF release version to stderr and exits.
 
 
-
-<a name="synopsis"></a>
 
 # Synopsis
 
@@ -4094,7 +3542,6 @@ Prints LSF release version to stderr and exits.
 
 **bjobs -V**
 
-<a name="conflicting-options"></a>
 
 # Conflicting Options
 
@@ -4106,12 +3553,9 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **Description**
-.ce 0
+
 
 
 By default, displays information about your own pending, running,
@@ -4720,7 +4164,6 @@ additional fields:
          When you use -data, displays a list of requested files
          for jobs with data requirements.
 
-<a name="output-forwarded-job-information"></a>
 
 # Output: Forwarded Job Information
 
@@ -4735,8 +4178,6 @@ mode. The following additional fields are displayed:
 
 **FORWARD_TIME **  
          The time that the job was forwarded.
-
-<a name="output-job-array-summary-information"></a>
 
 # Output: Job Array Summary Information
 
@@ -4822,7 +4263,6 @@ following fields are displayed:
          Number of unsuccessfully completed tasks of the Session
          Scheduler job.
 
-<a name="output-unfinished-job-summary-information"></a>
 
 # Output: Unfinished Job Summary Information
 
@@ -4856,8 +4296,6 @@ The count of job slots for the following job states is displayed:
 **FWD_PEND **  
          The job is pending and forwarded to a remote cluster.
          The job has not yet started in the remote cluster.
-
-<a name="output-affinity-resource-requirements-information-l-aff"></a>
 
 # Output: Affinity Resource Requirements Information (-L -Aff)
 
@@ -4964,8 +4402,6 @@ Thu Feb 14 14:15:07: Started 6 Task(s) on Hosts &lt;hostA&gt; &lt;hostA&gt; &lt;
   
   
 
-<a name="output-data-requirements-information-l-data"></a>
-
 # Output: Data Requirements Information (-L -Data)
 
 
@@ -5006,8 +4442,6 @@ Fri Sep 20 16:31:17: Submitted from host &lt;hb05b10&gt;, CWD
  SIZE: 500 MB  
  MODIFIED: Mon Apr 14 17:15:56  
 
-
-<a name="see-also"></a>
 
 # See Also
 
