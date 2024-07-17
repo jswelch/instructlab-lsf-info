@@ -42,12 +42,9 @@ specify bjobs -h with the name of the categories and options.
    running, and suspended jobs.
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-A**
-.ce 0
+
 
 
 Displays summarized information about job arrays.
@@ -933,12 +930,11 @@ Parent topic: bjobs
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
+
+
 **-hms**
-.ce 0
+
 
 
 Displays times in the customized output in _hh:mm:ss_ format.
@@ -2102,7 +2098,7 @@ Displays jobs that belong to the specified project.
 
 filter
 
-<a name="synopsis"></a>
+
 
 # Synopsis
 
@@ -2208,7 +2204,7 @@ displayed:
 
 The job array has reached its job slot limit.
 
-<a name="examples"></a>
+
 
 # Examples
 
@@ -2462,12 +2458,9 @@ Parent topic: Options
 
 
 
-.TH bjobs 1 "June 2023" "" ""
-.ll 72
 
-.ce 1000
 **-psum**
-.ce 0
+
 
 
 Displays a summarized version of reasons for pending jobs.
@@ -2580,7 +2573,7 @@ Displays jobs in the specified queue.
 
 
 
-<a name="categories"></a>
+
 
 # Categories
 
@@ -2841,7 +2834,7 @@ classes configured in lsb.serviceclasses, the default SLA
 configured in lsb.params, and dynamic information about the state
 of each service class.
 
-<a name="examples"></a>
+
 
 # Examples
 
@@ -3061,7 +3054,7 @@ filter
 
 
 
-**bjobs -u** user_name ... | **-u** user_group ... | -u all
+**bjobs -u** user_name ... | **-u** user_group ... | **-u** all
 
 # Conflicting Options
 
@@ -3079,7 +3072,7 @@ single backslash (_DOMAIN\_NAME_\_user\_name_) in a Windows
 command line or a double backslash
 (_DOMAIN\_NAME_\\_user\_name_) in a UNIX command line.
 
-<a name="examples"></a>
+
 
 # Examples
 
@@ -3466,7 +3459,7 @@ _submission\_job\_id_@_submission\_cluster\_name_).
 You can use bjobs 0 to find all jobs in your local cluster, but
 bjobs 0@submission_cluster_name is not supported.
 
-<a name="examples"></a>
+
 
 # Examples
 
@@ -3577,7 +3570,7 @@ and the resize notification command.
 
 To display older historical information, use bhist.
 
-<a name="output-default-display"></a>
+
 
 # Output: Default Display
 
@@ -3661,7 +3654,7 @@ A listing of jobs is displayed with the following fields:
 **SUBMIT_TIME **  
          The submission time of the job.
 
-<a name="output-long-format-l"></a>
+
 
 # Output: Long Format (-L)
 
@@ -4223,7 +4216,6 @@ following fields are displayed:
 **PSUSP **  
          Number of held jobs of the job array.
 
-<a name="output-lsf-session-scheduler-job-summary-informationlsf-session-scheduler-job-summary-informationjob-summary-information"></a>
 
 # Output: Lsf Session Scheduler Job Summary Informationlsf Session Scheduler Job Summary Informationjob Summary Information
 
